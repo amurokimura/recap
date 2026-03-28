@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RECAP – Research, Education and Clinical Academic Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f2d5e;
+    --blue: #1a56a0;
+    --blue-light: #e8f0fb;
+    --teal: #0d7e6e;
+    --teal-light: #e0f4f1;
+    --amber: #b45309;
+    --amber-light: #fef3c7;
+    --slate: #475569;
+    --slate-light: #f1f5f9;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8fafc;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a56a0 100%);
+    color: white;
+    padding: 4rem 1.25rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 25%;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .hero-acronym {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.5rem, 12vw, 6rem);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-fullname {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-divider {
+    width: 60px;
+    height: 3px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 2px;
+    margin: 1.75rem auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  /* GOAL SECTION */
+  .section-label {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue);
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .goal-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem 2rem 2rem 1.75rem;
+    border-left: 5px solid var(--blue);
+    box-shadow: 0 1px 4px rgba(15,45,94,0.06);
+    margin-bottom: 2rem;
+  }
+
+  .goal-card p {
+    color: var(--slate);
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  /* PILLARS */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .pillar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(15,45,94,0.05);
+    transition: box-shadow 0.2s;
+  }
+  .pillar-card:hover {
+    box-shadow: 0 4px 14px rgba(15,45,94,0.10);
+  }
+
+  .pillar-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.85rem;
+    font-size: 1.3rem;
+  }
+
+  .pillar-card:nth-child(1) .pillar-icon { background: var(--blue-light); }
+  .pillar-card:nth-child(2) .pillar-icon { background: var(--teal-light); }
+  .pillar-card:nth-child(3) .pillar-icon { background: var(--amber-light); }
+
+  .pillar-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .pillar-card p {
+    font-size: 0.87rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-acronym">RECAP</div>
+  <div class="hero-fullname">Research, Education and Clinical Academic Project</div>
+  <div class="hero-divider"></div>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- OUR GOAL -->
+  <span class="section-label">Our Goal</span>
+  <h2 class="section-title">What We Aim to Achieve</h2>
+
+  <div class="goal-card">
+    <p>
+      RECAP is dedicated to advancing clinical knowledge by fostering a culture of inquiry,
+      evidence-based practice, and academic excellence among healthcare professionals.
+      Our goal is to bridge the gap between clinical practice and academic research —
+      equipping residents, fellows, and faculty with the skills, resources, and collaborative
+      network needed to conduct meaningful research, disseminate findings, and ultimately
+      improve patient outcomes.
+    </p>
+  </div>
+
+  <!-- THREE PILLARS -->
+  <div class="pillars">
+    <div class="pillar-card">
+      <div class="pillar-icon">&#128270;</div>
+      <h3>Research</h3>
+      <p>Support rigorous clinical and translational research that addresses real-world healthcare challenges.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-icon">&#127979;</div>
+      <h3>Education</h3>
+      <p>Provide mentorship, training, and resources to develop the next generation of clinical academics.</p>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-icon">&#129657;</div>
+      <h3>Clinical Impact</h3>
+      <p>Translate academic findings into practice improvements that benefit patients and communities.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 RECAP &mdash; Research, Education and Clinical Academic Project
+</footer>
+
+</body>
+</html>
